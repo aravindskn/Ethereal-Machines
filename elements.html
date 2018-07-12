@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jewellery Addition</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets1/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="index.html">Jewellery</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2>Adding to Inventory</h2>
+						<p>Add the new Items to inventory by filling up form.</p>
+					</header>
+
+					<div class="row">
+						<div class="col-12">
+
+							<!-- Form -->
+								<section class="box">
+									<form>
+										<div class="row gtr-uniform gtr-50">
+											<div class="col-6 col-12-mobilep">
+												<input type="text" name="name" id="name" value="" placeholder="Item Name" required="" />
+											</div>
+											<div class="col-6 col-12-mobilep">
+												<input type="text" name="quantity" id="quantity" value="" placeholder="Quantity" required=""/>
+											</div>
+											<div class="col-12">
+												<select name="itype" id="itype" required="">
+													<option value="">- Type of Item -</option>
+													<option value="Ring">Ring</option>
+													<option value="EarRing">EarRing</option>
+													<option value="Necklace">Necklace</option>
+													<option value="Bracelet">Bracelet</option>
+												</select>
+											</div>
+											<div class="col-12">
+												<select name="makmet" id="makemat" required="">
+													<option value="">- Material Type -</option>
+													<option value="Gold">Gold</option>
+													<option value="Silver">Silver</option>
+													<option value="Diamond">Diamond</option>
+													<option value="Platinum">Platinum</option>
+												</select>
+											</div>
+                                            <div class="col-6 col-12-mobilep">
+                                                <input type="text" name="pdate" id="pdate" value="" placeholder="Date of Purchase(DD/MM/YY)" required="" />
+                                            </div>
+                                            <div class="col-6 col-12-mobilep">
+                                                <input type="text" name="netvalue" id="netvalue" value="" placeholder="Net Worth of Item(in INR)" required="" />
+                                            </div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="Add" onclick="additems()"/></li>
+													<li><input type="reset" value="Reset" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+                                </section>
+
+						</div>
+					</div>
+
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets1/js/jquery.min.js"></script>
+			<script src="assets1/js/jquery.dropotron.min.js"></script>
+			<script src="assets1/js/jquery.scrollex.min.js"></script>
+			<script src="assets1/js/browser.min.js"></script>
+			<script src="assets1/js/breakpoints.min.js"></script>
+			<script src="assets1/js/util.js"></script>
+			<script src="assets1/js/main.js"></script>
+            <script src="jsfile.js"></script>
+
+	</body>
+</html>

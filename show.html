@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Jewellery Inventory</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets1/css/main.css" />
+    <script src="jsfile.js"></script>
+</head>
+<body class="is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="index.html">Jewellery</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <section id="main" class="container">
+        <header>
+            <h2>Inventory</h2>
+            <p>Display the present Items in Inventory.</p>
+        </header>
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Form -->
+                <section class="box">
+                    <form name="invent">
+                        <div class="row gtr-uniform gtr-50">
+                            <div class="col-12">
+                                <select name="itype" id="itype">
+                                    <option value="">- Type of Item -</option>
+                                    <option value="Ring">Ring</option>
+                                    <option value="EarRing">EarRing</option>
+                                    <option value="Necklace">Necklace</option>
+                                    <option value="Bracelet">Bracelet</option>
+                                </select>
+                            </div>
+                            <h3>-----------------------------------------------------OR----------------------------------------------------</h3>
+                            <div class="col-12">
+                                <select name="makmet" id="makemat">
+                                    <option value="">- Material Type -</option>
+                                    <option value="Gold">Gold</option>
+                                    <option value="Silver">Silver</option>
+                                    <option value="Diamond">Diamond</option>
+                                    <option value="Platinum">Platinum</option>
+                                </select>
+                            </div>
+                            <div class="col-3 col-12-mobilep">
+                                <input type="submit" value="Search" class="fit" onclick="getvalue()" />
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="box">
+            <div class="row">
+                <div class="col-12">
+                    <table id="itemlist" align="center">
+                        <tr id="titleRow">
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Type of Item</th>
+                            <th>Material Type</th>
+                            <th>Date of Purchase</th>
+                            <th>Net Value</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets1/js/jquery.min.js"></script>
+<script src="assets1/js/jquery.dropotron.min.js"></script>
+<script src="assets1/js/jquery.scrollex.min.js"></script>
+<script src="assets1/js/browser.min.js"></script>
+<script src="assets1/js/breakpoints.min.js"></script>
+<script src="assets1/js/util.js"></script>
+<script src="assets1/js/main.js"></script>
+<script>
+    function getvalue()
+    {
+        var tt = document.invent.itype.value;
+        var make = document.invent.makmet.value;
+        viewitem(tt,make);
+    }
+</script>
+
+
+</body>
+</html>
