@@ -4,3 +4,9 @@ But there are few issues:
     2. Deletion of Item. The Logic Seems to be right to me but it doesnt function properly for some reason.
         Please have look at the logic.
     3. The details page couldnt be created according to your specifications.
+
+index.html is the first page.
+elements.html is for addition of data.
+show.html is for display of data according to type or material.
+generic.html is for display of all items.
+contact.html is for editing and deletion of data.
