@@ -32,16 +32,16 @@
 
 							<!-- Form -->
 								<section class="box">
-									<form>
+									<form name="invent">
 										<div class="row gtr-uniform gtr-50">
 											<div class="col-6 col-12-mobilep">
-												<input type="text" name="name" id="name" value="" placeholder="Item Name" required="" />
+												<input type="text" name="name" id="name" value="" placeholder="Item Name" required />
 											</div>
 											<div class="col-6 col-12-mobilep">
-												<input type="text" name="quantity" id="quantity" value="" placeholder="Quantity" required=""/>
+												<input type="text" name="quantity" id="quantity" value="" placeholder="Quantity" required/>
 											</div>
 											<div class="col-12">
-												<select name="itype" id="itype" required="">
+												<select name="itype" id="itype" required>
 													<option value="">- Type of Item -</option>
 													<option value="Ring">Ring</option>
 													<option value="EarRing">EarRing</option>
@@ -50,7 +50,7 @@
 												</select>
 											</div>
 											<div class="col-12">
-												<select name="makmet" id="makemat" required="">
+												<select name="makmet" id="makemat" required>
 													<option value="">- Material Type -</option>
 													<option value="Gold">Gold</option>
 													<option value="Silver">Silver</option>
@@ -59,14 +59,14 @@
 												</select>
 											</div>
                                             <div class="col-6 col-12-mobilep">
-                                                <input type="text" name="pdate" id="pdate" value="" placeholder="Date of Purchase(DD/MM/YY)" required="" />
+                                                <input type="text" name="pdate" id="pdate" value="" placeholder="Date of Purchase(DD-MM-YYYY)" required/>
                                             </div>
                                             <div class="col-6 col-12-mobilep">
-                                                <input type="text" name="netvalue" id="netvalue" value="" placeholder="Net Worth of Item(in INR)" required="" />
+                                                <input type="text" name="netvalue" id="netvalue" value="" placeholder="Net Worth of Item(in INR)" required />
                                             </div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" value="Add" onclick="additems()"/></li>
+													<li><input type="submit" value="Add" onclick="validate()"/></li>
 													<li><input type="reset" value="Reset" class="alt" /></li>
 												</ul>
 											</div>
@@ -90,6 +90,60 @@
 			<script src="assets1/js/util.js"></script>
 			<script src="assets1/js/main.js"></script>
             <script src="jsfile.js"></script>
+			<script>
+                function validate()
+                {
+                    var name = document.forms["invent"]["name"].value;
+                    var quantity = document.forms["invent"]["quantity"].value;
+                    var type = document.forms["invent"]["itype"].value;
+                    var mat = document.forms["invent"]["makemat"].value;
+                    var pate = document.forms["invent"]["pdate"].value;
+                    var value = document.forms["invent"]["netvalue"].value;
+                    var ck_password =  /^[A-Za-z]/;
+                    var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+                    if(!ck_password.test(name))
+                    {
 
+                        alert("Name can only contain alphanumeric characters");
+
+                    }
+                    else  if (name === "")
+                    {
+                        alert("Name must be filled out");
+                    }
+                    else if(quantity === "" )
+                    {
+                        alert("Quantity must be numeric");
+                    }
+                    else if(isNaN(quantity) || quantity < 1)
+                    {
+                        alert("Input not valid");
+                    }
+                    else if(type === "")
+                    {
+                        alert("Type must be filled out");
+                    }
+                    else if(mat === "")
+                    {
+                        alert("Material must be filled out");
+                    }
+                    else if (pate == null || pate === "" || !pattern.test(pate))
+                    {
+                        alert("Please Enter a Valid Date.")
+                    }
+                    else if(value === "")
+                    {
+                        alert("Value must be filled out");
+                    }
+                    else if (isNaN(value) || value < 1)
+                    {
+                        alert("Value not valid");
+                    }
+                    else
+                    {
+                        additems();
+                    }
+                }
+			</script>
 	</body>
 </html>

@@ -1,12 +1,12 @@
-<!--Search for Items Page-->
+<!--Display of all Items-->
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Jewellery Inventory</title>
+    <title>Details Page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets1/css/main.css" />
-    <script src="jsfile.js"></script>
+    <script src="jsfile.js  "></script>
 </head>
 <body class="is-preload">
 <div id="page-wrapper">
@@ -22,12 +22,10 @@
     </header>
 
     <!-- Main -->
-    <section id="main" class="container">
+    <section id="main" class="container" >
         <header>
-            <h2>Inventory</h2>
-            <p>Display the present Items in Inventory.</p>
+            <h2>Item Details</h2>
         </header>
-
         <div class="row">
             <div class="col-12">
                 <!-- Form -->
@@ -54,7 +52,7 @@
                                 </select>
                             </div>
                             <div class="col-3 col-12-mobilep">
-                                <input type="submit" value="Search" class="fit" onclick="getvalue()" />
+                                <input type="submit" value="Search" class="fit" onclick="viewitem(document.invent.itype.value,document.invent.makmet.value)" />
                             </div>
                         </div>
                     </form>
@@ -78,7 +76,6 @@
             </div>
         </div>
     </section>
-
 </div>
 
 <!-- Scripts -->
@@ -97,7 +94,5 @@
         viewitem(tt,make);
     }
 </script>
-
-
 </body>
 </html>
