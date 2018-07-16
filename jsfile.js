@@ -34,7 +34,7 @@ function viewitem(tt,make)
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
 
-       if(itemarray[i].itype === tt)
+       if(itemarray[i].itype === tt || itemarray[i].makemat === make)
        {
             cell1.innerHTML = itemarray[i].name;
             cell2.innerHTML = itemarray[i].quantity;
@@ -42,15 +42,6 @@ function viewitem(tt,make)
             cell4.innerHTML = itemarray[i].makemat;
             cell5.innerHTML = itemarray[i].pdate;
             cell6.innerHTML = itemarray[i].netvalue;
-       }
-       else if(itemarray[i].makemat === make)
-       {
-           cell1.innerHTML = itemarray[i].name;
-           cell2.innerHTML = itemarray[i].quantity;
-           cell3.innerHTML = itemarray[i].itype;
-           cell4.innerHTML = itemarray[i].makemat;
-           cell5.innerHTML = itemarray[i].pdate;
-           cell6.innerHTML = itemarray[i].netvalue;
        }
     }
 }
