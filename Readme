@@ -1,9 +1,7 @@
 I have tried to Complete all the functionality
 But there are few issues:
     1. On searching an Item using type or material, the result is display for few seconds then page automatically refreshs.
-    2. Deletion of Item. The Logic Seems to be right to me but it doesnt function properly for some reason.
-        Please have look at the logic.
-    3. The details page couldnt be created according to your specifications.
+    2. The details page couldnt be created according to your specifications.
 
 index.html is the first page.
 elements.html is for addition of data.
