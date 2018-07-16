@@ -24,7 +24,7 @@ function viewitem(tt,make)
 {
     itemarray = localStorage.getItem('item');
     itemarray = JSON.parse(itemarray);
-    for (i = 0; i < itemarray.length; i++)
+    for (var i = 0; i < itemarray.length; i++)
     {
         var row = itemlist.insertRow(1);
         var cell1 = row.insertCell(0);
@@ -86,12 +86,11 @@ function deleteitem(m)
 {
     itemarray = localStorage.getItem('item');
     itemarray = JSON.parse(itemarray);
-    for(i = 0; i < itemarray.length; i++)
+    for(var i = 0; i < itemarray.length; i++)
     {
         if(itemarray[i].name === m)
         {
-
-            itemarray = itemarray.splice(i,1);
+            itemarray.splice((i),1);
             localStorage.setItem('item',JSON.stringify(itemarray));
         }
     }
