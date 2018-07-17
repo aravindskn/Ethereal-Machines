@@ -69,7 +69,6 @@ function edititem()
             cell6.innerHTML = itemarray[i].netvalue;
 
     }
-
 }
 
 //Delete an Item..... The Logic Used is Correct here but it does not work properly. Please have look at the logic!
@@ -112,7 +111,7 @@ function eitem(m,m1,v)
     }
 }
 
-//Display all items in storage.
+//Display name of items in storage.
 function details()
 {
     itemarray = localStorage.getItem('item');
@@ -121,18 +120,36 @@ function details()
     {
         var row = itemlist.insertRow(1);
         var cell1 = row.insertCell(0);
+
+        cell1.innerHTML = itemarray[i].name;
+
+    }
+}
+
+// Display details
+function detitem(m)
+{
+    itemarray = localStorage.getItem('item');
+    itemarray = JSON.parse(itemarray);
+    for (i = 0; i < itemarray.length; i++)
+    {
+        var row = itemlist1.insertRow(1);
+        var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
 
-        cell1.innerHTML = itemarray[i].name;
-        cell2.innerHTML = itemarray[i].quantity;
-        cell3.innerHTML = itemarray[i].itype;
-        cell4.innerHTML = itemarray[i].makemat;
-        cell5.innerHTML = itemarray[i].pdate;
-        cell6.innerHTML = itemarray[i].netvalue;
+        if(itemarray[i].name === m)
+        {
+            cell1.innerHTML = itemarray[i].name;
+            cell2.innerHTML = itemarray[i].quantity;
+            cell3.innerHTML = itemarray[i].itype;
+            cell4.innerHTML = itemarray[i].makemat;
+            cell5.innerHTML = itemarray[i].pdate;
+            cell6.innerHTML = itemarray[i].netvalue;
+        }
 
     }
 }

@@ -32,6 +32,31 @@
                                 <table id="itemlist" align="center">
                                     <tr id="titleRow">
                                         <th>Item Name</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+					</div>
+					<section class="box">
+						<form name="invent">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-12">
+									<input type="text" name="name" id="name" value="" placeholder="Enter name of item for details to be displayed" required="" />
+								</div>
+							</div>
+						</form>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><input type="submit" value="Display" class="alt" onclick="getv()"/></li>
+                            </ul>
+                        </div>
+					</section>
+                    <div class="box">
+                        <div class="row">
+                            <div class="col-12">
+                                <table id="itemlist1" align="center">
+                                    <tr id="titleRow1">
+                                        <th>Item Name</th>
                                         <th>Quantity</th>
                                         <th>Type of Item</th>
                                         <th>Material Type</th>
@@ -41,7 +66,7 @@
                                 </table>
                             </div>
                         </div>
-					</div>
+                    </div>
 				</section>
 		</div>
 
@@ -53,6 +78,27 @@
 			<script src="assets1/js/breakpoints.min.js"></script>
 			<script src="assets1/js/util.js"></script>
 			<script src="assets1/js/main.js"></script>
+            <script>
+                function getv()
+                {
+                    var name = document.forms["invent"]["name"].value;
+                    var ck_password =  /^[A-Za-z]/;
+                    if(!ck_password.test(name))
+                    {
 
+                        alert("Name can only contain alphanumeric characters");
+
+                    }
+                    else  if (name === "")
+                    {
+                        alert("Name must be filled out");
+                    }
+                    else
+                    {
+                        var make = document.invent.name.value;
+                        detitem(make);
+                    }
+                }
+            </script>
 	</body>
 </html>

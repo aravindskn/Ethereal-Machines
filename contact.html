@@ -113,8 +113,23 @@
             <script>
                 function getd()
                 {
-                    var make = document.invent.name.value;
-                    deleteitem(make);
+                    var name = document.forms["invent"]["name"].value;
+                    var ck_password =  /^[A-Za-z]/;
+                    if(!ck_password.test(name))
+                    {
+
+                        alert("Name can only contain alphanumeric characters");
+
+                    }
+                    else  if (name === "")
+                    {
+                        alert("Name must be filled out");
+                    }
+                    else
+                    {
+                        var make = document.invent.name.value;
+                        deleteitem(make);
+                    }
                 }
                 function gete()
                 {
